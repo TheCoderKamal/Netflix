@@ -118,14 +118,14 @@ option{
     margin-top: 2em;
     margin-bottom: 1em;
 }
-.email-form{
+.email-head{
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
     white-space: nowrap;
     gap: 10px;
 }
-.email-form input{
+.email-head input{
     padding: 1em;
     font-size: 1em;
     border: none;
@@ -135,11 +135,11 @@ option{
     border-radius: 5px;
     color: #FFFFFF;
 }
-.email-form input::placeholder{
+.email-head input::placeholder{
     color: #B8B8B8;
 }
 
-.email-form button{
+.email-head button{
     background-color: #E50914;
     color: #FFFFFF;
     border: none;
@@ -500,15 +500,15 @@ footer{
         margin-top: 1em;
         line-height: 1.5em;
     }
-    .email-form{
+    .email-head{
         grid-template-columns: 1fr;
     }
-    .email-form input{
+    .email-head input{
         padding: 0.8em;
         font-size: 1em;
         padding-block: 1.1em;
     }
-    .email-form button{
+    .email-head button{
         font-size: 1.2em;
     }
 
