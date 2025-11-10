@@ -1,0 +1,598 @@
+@font-face{
+    font-family: sans-m;
+    src: url(./assets/fonts/NetflixSans_W_Md.woff2);
+}
+
+@font-face {
+    font-family: sans;
+    src: url(./assets/fonts/netflix-sans-core-variable-full.woff2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+
+
+
+
+
+.bg{
+    height: 100vh;
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.578), rgba(0, 0, 0, 0.896)),
+        url('./assets/images/netflix.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.header {
+    background-size: cover;
+    background-position: center;
+    padding: 1.5vw 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo svg {
+    height: 2.5em;
+    fill: #E50914;
+}
+.menus{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.menus select{
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+option{
+    color: black;
+}
+.lang-wrapper{
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0.4em 1.2em;
+    gap: 5px;
+}
+.lang-wrapper svg{
+    height: 1em;
+}
+.menus button{
+    background-color: #E50914;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.4em 1.2em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: sans-m;
+}
+
+
+
+.main-content{
+    align-self: center;
+    text-align: center;
+    margin-block: 20vh;
+    width: 40%;
+    white-space: wrap;
+    font-family: sans;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content h1{
+    font-size: 3.4rem;
+    margin-bottom: 0.3em;
+    font-family: sans-m;
+}
+.main-content h2{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.main-content p{
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.email-form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    white-space: nowrap;
+    gap: 10px;
+}
+.email-form input{
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.647);
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+.email-form input::placeholder{
+    color: #B8B8B8;
+}
+
+.email-form button{
+    background-color: #E50914;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7em 1em;
+    font-size: 1.5em;
+    line-height: 0%;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+
+
+.movie-section{
+    padding: 5em 10em;
+    width: 100%;
+    background-color: #000000;
+    font-family: sans;
+    font-size: 0.8em;
+}
+.movie-card-container{
+    display: flex;
+    gap: 4em;
+    overflow-x: auto;
+    margin-block: 2em;
+    padding-inline: 15px;
+}
+.movie-card{
+    position: relative;
+    display: inline-block;
+}
+.movie-card img{
+    width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+.movie-card img:hover{
+    transform: scale(1.07);
+    border-radius: 15px;
+}
+.movie-card h1{
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 10px;
+    left: -25px;
+    font-size: 100px;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #D3D3D3;
+}
+
+
+
+.reasonToJoin{
+    padding: 0em 10em;
+    width: 100%;
+    background-color: #000000;
+    font-family: sans;
+    font-size: 0.8em;
+    white-space: wrap;
+    padding-bottom: 20px;
+}
+.card-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block: 20px;
+    gap: 20px;
+}
+.card{
+    background: #192146;
+    background: linear-gradient(136deg, rgba(25, 33, 70, 1) 0%, rgba(33, 14, 23, 1) 100%);
+    padding: 2em 2em;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(134, 134, 134, 0.2), 0 10px 20px 0 rgba(255, 255, 255, 0.19);
+    transform: translateY(-5px);
+}
+.card p {
+    color: #BBBBC3;
+    margin-block: 1em;
+    font-size: 16px;
+    padding: 0px 5px;
+    margin-bottom: 5em;
+}
+.card svg{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    height: 70px;
+}
+
+
+
+.accordian-section{
+    width: 100%;    
+    padding: 3em 8em;  
+    background-color: #000000;
+    font-family: sans;
+    white-space: wrap;
+    font-weight: 100;
+
+}
+
+.accordian-section h1{
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.questions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #323232;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+.questions summary{
+    padding: 18px 24px;
+}
+
+.questions:hover{
+    background: #3b3b3b;
+    border-color: #505050;
+}
+
+.questions summary{
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions summary::-webkit-details-marker{
+    display: none;
+}
+
+.questions summary::after{
+    content: "+";
+    font-size: 1.4em;
+    transition: transform 0.3s ease;
+}
+
+.questions[open] summary::after{
+    content: "–";
+}
+
+.accordian-content{
+    max-height: 0;
+    overflow: hidden;
+    color: #D3D3D3;
+    line-height: 1.6em;
+    font-size: 1em;
+
+    padding: 0;
+    opacity: 0;
+    transition:
+        max-height 0.5s ease,
+        padding 0.5s ease,
+        opacity 0.4s ease;
+}
+
+.questions[open] .accordian-content{
+    max-height: 500px; 
+    padding-top: 1em;
+    opacity: 1;
+}
+
+.accordian-content p{
+    margin-bottom: 1em;
+    padding: 0px 24px;
+}
+
+.email-section{
+    background: #000;
+    width: 100%;
+    padding: 2em 8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    white-space: wrap;
+}
+.email-section h2{  
+    font-family: sans;
+    font-weight: 300;
+    font-size: 1.0em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.email-form{
+    width: 60%;
+}
+
+
+footer{
+    margin-top: auto;
+    padding: 2em 8em;
+    background: #000;
+    font-family: sans;
+    font-size: 0.8em;
+    white-space: wrap;
+}
+.call{
+    margin-bottom: 2em;
+    color: #b0b0b0;
+    font-size: 17px;
+}
+.number{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-links{
+    margin-block: 3em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.footer-links a{
+    color: #a1a1a1;
+    text-decoration: none;
+    margin-bottom: 1.5em;
+    display: block;
+    transition: 0.3s ease;
+}
+.footer-links a:hover{
+    text-decoration: underline;
+    color: #f5f5f5;
+}
+.lang{
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0.4em 1.2em;
+    gap: 5px;
+    width: fit-content;
+    margin-bottom: 4em;
+}
+.lang svg{
+    height: 1em;
+}
+.lang-select{
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    padding: 0em 1em;
+}
+.tag{
+    color: #a8a8a8;
+    margin-bottom: 1em;
+}
+.more{
+    color: #6d6d6d;
+    margin-top: 3em;
+}
+
+
+/* Small PC */
+@media (max-width: 1024px) {
+
+    .bg{
+        height: auto;
+    }
+    .main-content h1{
+        font-size: 3em;
+        margin-bottom: 0.3em;
+    }
+    .main-content{
+        width: 70%;
+    }
+
+    .movie-section{
+        padding: 3em 5em;
+    }
+    .movie-card img{
+        width: 100px;
+    }
+    .movie-card h1{
+        font-size: 60px;
+        left: -12px;
+    }   
+
+    .reasonToJoin{
+        padding: 1em 5em;
+    }
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        height: auto;
+    }
+
+    .accordian-section{
+        padding: 2em 4em;  
+    }
+
+    .email-form{
+        width: 100%;
+    }
+
+    .footer-links{
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 14px;
+    }
+}
+
+/* Tab */
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 3.5vw 5vw;
+    }
+    .logo svg {
+        height: 1.5em;
+    }
+    .menus{
+        gap: 10px;
+    }
+    .lang-wrapper, .menus button{
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+
+    .main-content{
+        width: 55%;
+        margin-block: 20vh;
+        
+    }
+    .main-content h1{
+        font-size: 2em;
+        margin-bottom: 0.3em;
+    }
+    .main-content h2{
+        font-size: 1em;
+        font-weight: 300;
+        margin: 0;
+    }
+    .main-content p{
+        font-size: 1em;
+        margin-top: 1em;
+        line-height: 1.5em;
+    }
+    .email-form{
+        grid-template-columns: 1fr;
+    }
+    .email-form input{
+        padding: 0.8em;
+        font-size: 1em;
+        padding-block: 1.1em;
+    }
+    .email-form button{
+        font-size: 1.2em;
+    }
+
+
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+
+
+    .accordian-section{
+        padding: 2em 3em;  
+    }
+
+    .email-section{
+        padding: 2em 2em;
+    }
+
+    .footer-links{
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 14px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    .header{
+        padding: 7vw 7vw;
+    }
+    .logo svg {
+        height: 1.5em;
+    }
+    .menus{
+        gap: 8px;
+        justify-content: space-between;
+    }
+    .lang-select{
+        padding: 0em 0.5em;
+        font-size: 0.8em;
+        width: 10px;
+    }
+
+    .main-content{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+
+
+    .movie-section{
+        padding: 2em 2em;
+    }
+    .movie-section > h1{
+        font-size: 1.5em;
+    }
+    .movie-card-container img{
+        height: 200px;
+        width: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .reasonToJoin{
+        padding: 1em 2em;
+    }
+
+    .accordian-section{
+        padding: 2em 1.5em;
+    }
+
+    footer{
+        padding: 0em 3em;
+        width: 100%;
+    }
+    .footer-links{
+        grid-template-columns: 1fr;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .lang select{
+        width: 100%;
+        font-size: 16px;
+    }
+    .lang svg{
+        height: 2em;
+    }
+}
+
