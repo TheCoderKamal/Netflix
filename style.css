@@ -348,6 +348,39 @@ option{
 }
 .email-form{
     width: 60%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    white-space: nowrap;
+    gap: 10px;
+}
+.email-form input{
+    padding: 1em;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.647);
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+.email-form input::placeholder{
+    color: #B8B8B8;
+}
+
+.email-form button{
+    background-color: #E50914;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7em 1em;
+    font-size: 1.5em;
+    line-height: 0%;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
 }
 
 
@@ -524,6 +557,17 @@ footer{
 
     .email-section{
         padding: 2em 2em;
+    }
+    .email-form{
+        grid-template-columns: 1fr;
+    }
+    .email-form input{
+        padding: 0.8em;
+        font-size: 1em;
+        padding-block: 1.1em;
+    }
+    .email-form button{
+        font-size: 1.2em;
     }
 
     .footer-links{
